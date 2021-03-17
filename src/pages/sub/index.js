@@ -1,9 +1,9 @@
 import React from 'react'
 
-export default function b() {
+export default function a() {
     return (
         <div>
-            <h1>页面b</h1>
+            <h1>sub首页</h1>
         </div>
     )
 }

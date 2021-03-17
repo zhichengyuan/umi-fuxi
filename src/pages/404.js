@@ -1,9 +1,9 @@
 import React from 'react'
 
-export default function b() {
+export default function() {
     return (
         <div>
-            <h1>页面b</h1>
+            <h1>404</h1>
         </div>
     )
 }
