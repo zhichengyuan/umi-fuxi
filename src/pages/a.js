@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Page1() {
+export default function a() {
     return (
         <div>
             <h1>页面1sdfsdfsdsd</h1>
