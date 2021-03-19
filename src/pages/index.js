@@ -1,9 +1,12 @@
-import React from 'react'
+ import React from 'react'
 
-export default function index() {
-    return (
-        <div>
-            <h1>首页a s</h1>
-        </div>
-    )
-}
+ function Home() {
+     return (
+         <div>
+             <h1>首页1杀杀杀 </h1>
+         </div>
+     )
+ }
+ Home.title = '首页';
+ Home.wrappers = ['@/routes/HandleTitle'];
+ export default Home;

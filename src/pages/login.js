@@ -1,7 +1,7 @@
 import React,{useRef} from 'react'
 import {history} from 'umi'
 
-export default function login() {
+function login() {
     const txtLoginId = useRef();
     const txtLoginPwd = useRef();
     return (
@@ -21,3 +21,7 @@ export default function login() {
         </div>
     )
 }
+
+login.title = '登录页面'
+
+export default login;

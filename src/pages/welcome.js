@@ -1,17 +1,20 @@
 import React from 'react'
 import {history} from 'umi'
 
-export default function welcome() {
+function Welcome() {
     const loginId = localStorage.getItem('loginId')
     return (
         <div>
             h1 欢迎你，{loginId}
             <p>
                 <button onClick={() => {
-                    localStorage.setItem("loginId",null)
+                    localStorage.removeItem("loginId")
                     history.push('/login')
                 }}>注销</button>
             </p>
         </div>
     )
 }
+Welcome.title = '欢迎页'
+Welcome.wrappers = ['@/routes/PrivateRouter']
+export default Welcome;
