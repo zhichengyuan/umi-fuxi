@@ -13,7 +13,7 @@ export default function index(props) {
                 <NavLink to="/">首页</NavLink>
                 <NavLink to="/login">登录页</NavLink>
                 <NavLink to="/welcome">欢迎页1</NavLink>
-                
+                <NavLink to='/counter'>计数器</NavLink>
                 {/* <Menu></Menu> */}
             </div>
             {props.children}

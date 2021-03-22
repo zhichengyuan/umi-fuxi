@@ -15,6 +15,7 @@ export default function Menu() {
             <button onClick={() => {
                 history.push('/sub/sdsdsd/ididid')
             }}>跳转可选参数的页面</button>
+            <NavLink to='/counter'>计数器</NavLink>
         </div>
     )
 }
