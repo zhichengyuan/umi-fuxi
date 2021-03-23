@@ -1,6 +1,8 @@
+ import { getAllStudents } from '@/services/student'
  import React from 'react'
 
  function Home() {
+     getAllStudents().then(res => console.log(res));
      return (
          <div>
              <h1>首页1杀杀杀 </h1>
