@@ -5,7 +5,7 @@
      getAllStudents().then(res => console.log(res));
      return (
          <div>
-             <h1>首页1杀杀杀 </h1>
+             <h1>首页1杀杀杀ss </h1>
          </div>
      )
  }
