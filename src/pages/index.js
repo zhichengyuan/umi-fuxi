@@ -1,11 +1,11 @@
- import { getAllStudents } from '@/services/student'
+ import { searchStudents } from '@/services/student'
  import React from 'react'
 
  function Home() {
-     getAllStudents().then(res => console.log(res));
+    searchStudents().then(res => console.log(res));
      return (
          <div>
-             <h1>首页1杀杀杀ss </h1>
+             <h1>首页欢迎你 </h1>
          </div>
      )
  }
