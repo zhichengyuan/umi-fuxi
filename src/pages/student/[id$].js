@@ -1,9 +1,11 @@
 import React from 'react'
 
-export default function Detail() {
+function Detail() {
     return (
         <div>
             <h1>修改学生页</h1>
         </div>
     )
 }
+Detail.wrappers = ['@/routes/PrivateRouter'];
+export default Detail;

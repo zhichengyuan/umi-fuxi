@@ -7,7 +7,7 @@ import { NavLink } from 'umi';//实际上就是react-router-dom中的NavLink组�
 import styles from './index.css'
 import Layout from '../components/Layout'
 import Aside from '../components/Aside'
-import Menu from '../components/Menu'
+import MenuContainer from '../components/containers/MenuContainer'
 
 export default function index(props) {
     if(props.location.pathname === '/login') {
@@ -17,7 +17,7 @@ export default function index(props) {
         return (
                 <Layout
                     aside={<Aside/>}
-                    header={<Menu/>}
+                    header={<MenuContainer/>}
                     // aside='dddd'
                 >
                     <div className={styles.main}>

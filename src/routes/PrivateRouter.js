@@ -1,15 +1,22 @@
-import React from 'react'
-import {Link} from 'umi'
+import { connect,routerRedux } from 'dva'
 
-export default function PrivateRouter(props) {
-    var loginId = localStorage.getItem('loginId')
-    if(loginId) {
+function PrivateRouter(props) {
+    if(props.loginId) {
+        //一登录
         return props.children
     }else {
-        return <div>
-            <p>
-                该页面必须要登录后才可以访问，<Link to="/login">请先登录</Link>
-            </p>
-        </div>
+        //未登录
+        props.onNotLogin && props.onNotLogin();
+        return null
     }
 }
+const mapStateToProps = state => ({
+    loginId:state.loginUser
+})
+const mapDispatchToProps = dispatch => ({
+    onNotLogin() {
+        dispatch(routerRedux.push('/login'))
+    }
+})
+
+export default connect(mapStateToProps,mapDispatchToProps)(PrivateRouter)

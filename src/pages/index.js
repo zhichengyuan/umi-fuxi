@@ -10,5 +10,5 @@
      )
  }
  Home.title = '首页';
- Home.wrappers = ['@/routes/HandleTitle'];
+ Home.wrappers = ['@/routes/PrivateRouter'];
  export default Home;
