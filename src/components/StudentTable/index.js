@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import './index.css'
+import {Link} from 'umi'
 
 export default function StudentTable(props) {
     const trs = props.stus.map(s => <tr key={s.id}>
@@ -9,7 +10,8 @@ export default function StudentTable(props) {
         <td>{s.sex === 1 ? '女' : '男'}</td>
         <td>{s.birth}</td>
         <td>{s.email}</td>
-        <td><a href={`/students/${s.sNo}`}>详情</a></td>
+        <td>
+            <Link to={`/student/${s.sNo}`}>详情</Link></td>
     </tr>)
     return (
         <table className="tab">

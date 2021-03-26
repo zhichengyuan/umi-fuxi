@@ -1,9 +1,16 @@
 import React from 'react'
+import StudentPager from '@/components/containers/StudentPager'
+import StudentTableContainer from '@/components/containers/StudentTableContainer'
+import StudentSearchBarContainer from '@/components/containers/StudentSearchBarContainer'
+import StudentTableLoading from '@/components/containers/StudentTableLoading'
 
  function index() {
     return (
         <div>
-            <h1>学生列表页</h1>
+            <StudentSearchBarContainer/>
+            <StudentTableContainer/>
+            <StudentPager/>
+            <StudentTableLoading/>
         </div>
     )
 }

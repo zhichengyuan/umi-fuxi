@@ -8,10 +8,11 @@ import './index.css'
  * 2、total：总数据量
  * 3、limit：页容量，每页显示的数据量
  * 4、panelNumber:数字页码最多显示多少个
- * 
+ * 5、onPageChange
  */
 
 export default function Pager(props) {
+    
     const pageNumber = getPageNumber(props);
     if(pageNumber == '0') {
         return null;

@@ -3,7 +3,6 @@ import styles from './index.less'
 import PropTypes from 'prop-types'
 
 export default function Layout(props) {
-    console.log(props)
     return (
         <>
             <div className={styles.header}>

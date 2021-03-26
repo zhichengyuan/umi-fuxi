@@ -1,3 +1,4 @@
+import {searchStudents} from '../services/student'
 export default {
     state :{
         condition:{//搜索条件
@@ -9,6 +10,13 @@ export default {
         result:{
             total:0,//总数据量
             datas:[]//学生数据
+        }
+    },
+    subscriptions:{
+        initStudents({dispatch}) {
+            dispatch({
+                type:'fetchStudents'
+            })
         }
     },
     reducers:{
@@ -32,9 +40,17 @@ export default {
         /**
          * 根据当前的条件，搜索学生
          */
-        *fetchStudents(action,{put,select}) {
+        *fetchStudents(action,{put,select,call}) {
             //拿到当前的搜索条件 
-            const condition = yield select(state => state.student.condition);
+            const condition = yield select(state => state.students.condition);
+            const result = yield call(searchStudents,condition);
+            yield put({
+                type:'setResult',
+                payload:{
+                    total:result.cont,
+                    datas:result.datas
+                }
+            })
         }
     }
 }
